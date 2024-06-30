@@ -2,7 +2,7 @@ const displayInput = document.getElementById('result');
 let firstOperand = '';
 let operator = '';
 let secondOperand = '';
-let memory = 0; // For optional memory functionality
+let memory = 0;
 
 function updateDisplay(value) {
   displayInput.value = value;
@@ -75,7 +75,7 @@ function handleBackspace() {
 function createButton(text, clickHandler, id) {
   const button = document.createElement('button');
   button.textContent = text;
-  button.id = id; // Set the id attribute
+  button.id = id;
   button.classList.add('btn', 'btn-secondary', 'm-1');
   button.addEventListener('click', clickHandler);
   return button;
@@ -126,7 +126,7 @@ function addButtons() {
 }
 
 function calculateResult() {
-  secondOperand = displayInput.value; // Ensure secondOperand is set
+  secondOperand = displayInput.value;
   if (firstOperand === '' || secondOperand === '' || operator === '') {
     return;
   }
